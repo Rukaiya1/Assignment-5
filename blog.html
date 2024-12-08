@@ -15,7 +15,8 @@
     <link rel="stylesheet" href="Styles/styles.css">
   </head>
   <body>
-    <header class="sticky top-0 z-10">
+      <!-- header section -->
+      <header class="sticky top-0 z-10">
         <section class="bg-[#F9F7F3]">
           <nav class="lg:w-[80%] mx-auto flex justify-between items-center lg:py-10 p-4">
             <a href="blog.html" class="btn bg-[#B4F461] text-[#111] lg:text-lg text-sm font-semibold rounded-lg px-8">Blog</a>
@@ -33,8 +34,8 @@
 
         <!-- Button section  -->
         <section class="glass flex justify-center items-center lg:gap-4 gap-2 pt-10 pb-6">
-          <a href="index.html" class="btn bg-[#B4F461] text-[#111] lg:text-lg text-sm font-semibold rounded-lg px-8">Donation</a>
-          <a id="history" class="btn btn-outline border border-gray-500 text-gray-500 lg:text-lg text-sm font-semibold rounded-lg px-8">History</a>
+          <button id="donationBtn" class="btn bg-[#B4F461] text-[#111] lg:text-lg text-sm font-semibold rounded-lg px-8">Donation</button>
+          <button id="historyBtn" class="btn btn-outline border border-gray-500 text-[#111] lg:text-lg text-sm font-semibold rounded-lg px-8">History</button>         
         </section>
     </header>
     <main>
@@ -73,5 +74,6 @@
         </div>
       </section>
     </main>
+    <script src="donate.js"></script>
   </body>
 </html>
