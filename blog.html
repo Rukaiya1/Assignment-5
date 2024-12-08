@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog</title>
+    <!-- DaisyUI & tailwind cdn  -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="Styles/styles.css">
+  </head>
+  <body>
+    <header class="sticky top-0 z-10">
+        <section class="bg-[#F9F7F3]">
+          <nav class="lg:w-[80%] mx-auto flex justify-between items-center lg:py-10 p-4">
+            <a href="blog.html" class="btn bg-[#B4F461] text-[#111] lg:text-lg text-sm font-semibold rounded-lg px-8">Blog</a>
+            <div class="flex items-center lg:gap-4 gap-2">
+              <img src="images/logo.png" alt="logo"/>
+              <p class="lg:text-lg text-sm font-semibold">Donate Bangladesh</p>
+            </div>
+            <div class="flex items-center gap-1">
+              <img src="images/coin.png" alt="coin" />
+                <p id="total"></p>
+                <p>BDT</p>
+            </div>
+          </nav>
+        </section>
+
+        <!-- Button section  -->
+        <section class="glass flex justify-center items-center lg:gap-4 gap-2 pt-10 pb-6">
+          <a href="index.html" class="btn bg-[#B4F461] text-[#111] lg:text-lg text-sm font-semibold rounded-lg px-8">Donation</a>
+          <a id="history" class="btn btn-outline border border-gray-500 text-gray-500 lg:text-lg text-sm font-semibold rounded-lg px-8">History</a>
+        </section>
+    </header>
+    <main>
+      <section class="lg:w-[80%] mx-auto py-8 px-3">
+        <!-- Heading -->
+      <span class="flex flex-row items-center gap-4 mb-8"><h1 class="text-4xl font-bold my-4">Important FAQ </h1><img src="images/conversation.png" alt=""></span>
+      <!-- FAQ's -->
+        <div class="collapse collapse-arrow bg-base-200 mb-4">
+          <input type="radio" name="my-accordion-2" checked="checked" />
+          <div class="collapse-title text-xl font-medium">What is the Document Object Model (DOM)?</Object></div>
+          <div class="collapse-content">
+            <p>The Document Object Model (DOM) is a programming interface for web documents. It represents the objects that comprise the structure and content of a document on the webpage.</p>
+          </div>
+        </div>
+        <div class="collapse collapse-arrow bg-base-200 mb-4">
+          <input type="radio" name="my-accordion-2" />
+          <div class="collapse-title text-xl font-medium">How do you select an element from the DOM?</div>
+          <div class="collapse-content">
+            <p>Using various methods are being used to select an element. For instances, The getElementById method allows one to select an element by its ID. The getElementsByTagName method allows one to select elements by their tag name and so on.</p>
+          </div>
+        </div>
+        <div class="collapse collapse-arrow bg-base-200 mb-4">
+          <input type="radio" name="my-accordion-2" />
+          <div class="collapse-title text-xl font-medium">What is event delegation in the context of DOM, and why is it useful?</div>
+          <div class="collapse-content">
+            <p>Event delegation attaches a single event listener to a parent element. It doesn't attach multiple listeners to individual child elements. It improves the performance.</p>
+          </div>
+        </div>
+        <div class="collapse collapse-arrow bg-base-200 mb-4">
+          <input type="radio" name="my-accordion-2" />
+          <div class="collapse-title text-xl font-medium">How do you manipulate an element's attributes and styles using the DOM?</div>
+          <div class="collapse-content">
+            <p>
+               One can use setAttribute() method to manipulate an element's attributes. And to manipulate styles, one can modify the style using property values for inline styles.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
