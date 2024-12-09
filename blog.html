@@ -19,7 +19,7 @@
       <header class="sticky top-0 z-10">
         <section class="bg-[#F9F7F3]">
           <nav class="lg:w-[80%] mx-auto flex justify-between items-center lg:py-10 p-4">
-            <a href="blog.html" class="btn bg-[#B4F461] text-[#111] lg:text-lg text-sm font-semibold rounded-lg px-8">Blog</a>
+            <a href="index.html" class="btn bg-[#B4F461] text-[#111] lg:text-lg text-sm font-semibold rounded-lg px-8">Home</a>
             <div class="flex items-center lg:gap-4 gap-2">
               <img src="images/logo.png" alt="logo"/>
               <p class="lg:text-lg text-sm font-semibold">Donate Bangladesh</p>
@@ -32,11 +32,6 @@
           </nav>
         </section>
 
-        <!-- Button section  -->
-        <section class="glass flex justify-center items-center lg:gap-4 gap-2 pt-10 pb-6">
-          <button id="donationBtn" class="btn bg-[#B4F461] text-[#111] lg:text-lg text-sm font-semibold rounded-lg px-8">Donation</button>
-          <button id="historyBtn" class="btn btn-outline border border-gray-500 text-[#111] lg:text-lg text-sm font-semibold rounded-lg px-8">History</button>         
-        </section>
     </header>
     <main>
       <section class="lg:w-[80%] mx-auto py-8 px-3">
@@ -54,14 +49,14 @@
           <input type="radio" name="my-accordion-2" />
           <div class="collapse-title text-xl font-medium">How do you select an element from the DOM?</div>
           <div class="collapse-content">
-            <p>Using various methods are being used to select an element. For instances, The getElementById method allows one to select an element by its ID. The getElementsByTagName method allows one to select elements by their tag name and so on.</p>
+            <p>Using various methods one can select an element from the DOM. For instances, The getElementById method allows one to select an element by its ID. The getElementsByTagName method allows one to select elements by their tag name. The querySelector method is used to select first element and the querySelectorAll method is used to select all elements that matches a specified CSS selector(s) in the document.</p>
           </div>
         </div>
         <div class="collapse collapse-arrow bg-base-200 mb-4">
           <input type="radio" name="my-accordion-2" />
           <div class="collapse-title text-xl font-medium">What is event delegation in the context of DOM, and why is it useful?</div>
           <div class="collapse-content">
-            <p>Event delegation attaches a single event listener to a parent element. It doesn't attach multiple listeners to individual child elements. It improves the performance.</p>
+            <p>Event delegation is a technique in javascript that attaches a single event listener to a parent element. It doesn't attach multiple listeners to individual child elements. It is useful to improve the performance by reducing the number of event listeners.</p>
           </div>
         </div>
         <div class="collapse collapse-arrow bg-base-200 mb-4">
@@ -69,7 +64,7 @@
           <div class="collapse-title text-xl font-medium">How do you manipulate an element's attributes and styles using the DOM?</div>
           <div class="collapse-content">
             <p>
-               One can use setAttribute() method to manipulate an element's attributes. And to manipulate styles, one can modify the style using property values for inline styles.</p>
+               One can use setAttribute() method to manipulate an element's attributes. And to manipulate an element's styles, one can use the style property to set individual CSS properties for inline styles.</p>
           </div>
         </div>
       </section>

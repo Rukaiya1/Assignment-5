@@ -16,8 +16,8 @@ document.getElementById("donation-btn").addEventListener("click", function (even
   event.target.style.border = "0px";
   document.getElementById("history-btn").style.backgroundColor = "#FFF";
   document.getElementById("history-btn").style.border ="1px solid rgba(17, 17, 17, 0.30)";
-  historySection.classList.add("hidden");
   donationSection.classList.remove("hidden");
+  historySection.classList.add("hidden");
 });
 
 document.getElementById("history-btn").addEventListener("click", function (event) {
@@ -25,30 +25,26 @@ document.getElementById("history-btn").addEventListener("click", function (event
   event.target.style.border = "0px";
   document.getElementById("donation-btn").style.backgroundColor = "#FFF";
   document.getElementById("donation-btn").style.border ="1px solid rgba(17, 17, 17, 0.30)";
-  donationSection.classList.add("hidden");
   historySection.classList.remove("hidden");
+  donationSection.classList.add("hidden");
 });
 
 
-// Amount validation
+// Amount check section
 const buttons = donationSection.querySelectorAll("button");
 for (const button of buttons) {
   button.onclick = function (event) {
     const parentValue = event.target.parentNode;
     const inputValue = parentValue.querySelector("input").value;
-    if (isNaN(inputValue)) {
+    let donation = parseInt(inputValue);
+    if (isNaN(inputValue) || donation <= 0) {
       parentValue.querySelector("input").value = "";
       alert("Amount is not valid");
     }
-    else {
-      let donation = parseInt(inputValue);
+    else {     
       if (amount < donation) {
         parentValue.querySelector("input").value = "";
         alert("Amount is not sufficient");
-      }
-      else if(donation <= 0){
-        parentValue.querySelector("input").value = "";
-        alert("Enter a Valid Amount")
       }
       else {
         amount = checkAmount(amount, donation);
@@ -62,9 +58,9 @@ for (const button of buttons) {
         const time = new Date();
         const heading = parentValue.querySelector('h2');
         const child = document.createElement('div');
-        child.innerHTML = `<div class="lg:px-6 px-3 rounded-xl py-4 my-4 border border-gray-300j">
-        <p class="font-bold lg:text-xl text-base">${donation} Taka is Donated for ${heading.innerText}</p>
-        <p class="lg:text-base text-sm text-[#1111119e] font-light">Date : ${time}</p>
+        child.innerHTML = `<div class="lg:px-6 px-3 rounded-xl py-4 my-4 border border-gray-300">
+        <p class="font-bold lg:text-xl text-lg mt-2 mb-4">${donation} Taka is Donated for ${heading.innerText}</p>
+        <p class="lg:text-base text-sm text-[#1111118a] mb-2">Date : ${time}</p>
         </div>`;
         historySection.appendChild(child);
 
